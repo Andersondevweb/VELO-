@@ -1,0 +1,250 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;}
+
+:root{
+    --red:rgb (122,29,29);
+    --typo:'montserrat', sans-serif
+  --depart:rgb(255 0 40);
+
+     --degrade:linear-gradient(90deg, rgba(255,0,40,1) 0%, rgba(0,0,0,1) 67%, rgba(14,14,14,1) 100%);}
+
+
+header{display: flex;
+justify-content: space-between;
+background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 51%, rgba(255,2,2,1) 100%, rgba(14,14,14,1) 100%);}
+
+
+
+body{background: background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(250,3,3,1) 63%);}
+header+section{
+  background: darkred;
+  background: rgb(255,0,40);
+background: linear-gradient(90deg, rgba(255,0,40,1) 0%, rgba(0,0,0,1) 67%, rgba(14,14,14,1) 100%);
+min-height: 511px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 100% 88%, 100% 89%, 50% 80%, 0 100%);
+box-shadow: inset 10px 10px 15px black;
+}
+
+article.h>a{display: block;
+text-align: center;
+background: gray;
+color: white;
+border-radius: 30px;
+border: 1px solid whitesmoke;
+width: 150px;
+margin: 20px ;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header+section>a>figure{background: white;
+width: 20%;
+min-height: 511px;
+position: absolute;
+right: 0;
+top: 0;}
+
+header+section>a>figure>img{position: absolute;
+right: 0;
+top: 0;}
+header>a{
+    display: block;
+    width: 60px;
+}
+
+hgroup{width: 270px;
+margin-left: 5%;}
+
+h1{font-size: 30px;
+margin-bottom: 2vh;
+}
+main>section:first-child{
+  display: flex;
+  flex-wrap:wrap ;
+}
+main>section:first-child>article{
+  flex:1;
+  min-width: 270px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 1px 1px 3px black;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+section:first-child>article :is(h3,p){
+  margin: 10px;
+}
+.bleu{display: block;
+background: blue;
+width:58px;
+height: 53px;
+position: absolute;
+top: 0;
+left: 0;
+clip-path:polygon( 0 0, 0% 100% 100% 0);
+
+}
+
+main{position: relative;}
+main>section:first-child>h2{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+    header + section {
+      background: rgb(255,0,40);
+      background: linear-gradient(90deg, rgba(255,0,40,1) 0%, rgba(0,0,0,1) 67%, rgba(14,14,14,1) 100%);
+      ;
+      width: 100%;
+      min-height: 411px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+      box-shadow: inset 10px 10px 15px black;
+    
+    }
+
+  
+
+
+    header + section > a > figure {
+      background: black;
+      width: 20%;
+      min-height: 411px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  
+    #slide {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  
+    hgroup {
+      width: 17.2%;
+      margin-left: 5%;
+    }
+  
+    header > a {
+      display: block;
+      width: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+
+    main{width: 100%;
+    background: var(--vert);}
+    header + section {
+      background: var(--red);
+      width: 100%;
+      min-height: 411px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: inset 10px 10px 15px black;
+    }
+  
+    header + section > a > figure {
+      display: none;
+    }
+    hgroup {
+      width: 80%;
+      margin: auto;
+    }
+  
+    header > a {
+      display: block;
+      width: 60px;
+      margin: auto;
+    }
+    
+
+
+  }
+ /* Sidenav menu */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: black;
+  padding-top: 60px;
+  transition: left 0.5s ease;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: red;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: whitesmoke;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+  left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
